@@ -12,7 +12,7 @@ function reviver(key: string, value: any) {
 export function getAppliedMigrations(): migrator.IAppliedMigration[] {
   const value = localStorage.getItem(storageKey);
   const parsedValue =
-    value && (JSON.parse(storageKey, reviver) as migrator.IAppliedMigration[]);
+    value && (JSON.parse(value, reviver) as migrator.IAppliedMigration[]);
   return parsedValue || ([] as migrator.IAppliedMigration[]);
 }
 
