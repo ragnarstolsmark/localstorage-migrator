@@ -2,10 +2,16 @@
   "name": "localstorage-migrator",
   "version": "1.0.0",
   "description": "A library for applying migrations to localstorage.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jest.config.json"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ragnarstolsmark/localstorage-migrator.git"
@@ -16,10 +22,23 @@
     "migrator",
     "migrations"
   ],
+  "types": "lib/index.d.ts",
   "author": "Ragnar Stølsmark",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ragnarstolsmark/localstorage-migrator/issues"
   },
-  "homepage": "https://github.com/ragnarstolsmark/localstorage-migrator#readme"
+  "homepage": "https://github.com/ragnarstolsmark/localstorage-migrator#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "rstolsmark-json-migrator": "^1.0.4"
+  }
 }
