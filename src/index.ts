@@ -22,8 +22,8 @@ export function storeAppliedMigrations(
   localStorage.setItem(storageKey, JSON.stringify(appliedMigrations));
 }
 
-export default function migrate(migrations: migrator.IMigration[]) {
+export function migrate(migrations: migrator.IMigration[]) {
   const appliedMigrations = getAppliedMigrations();
-  migrator.default(migrations, appliedMigrations);
+  migrator.migrate(migrations, appliedMigrations);
   storeAppliedMigrations(appliedMigrations);
 }
