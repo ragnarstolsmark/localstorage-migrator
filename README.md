@@ -17,7 +17,6 @@ A migration is an object that consist of two items:
 
 Example:
 ```typescript
-
 import * as migrator from "localstorage-migrator";
 const migrations = [
   {
@@ -56,7 +55,8 @@ export function runMigrations() : void {
 }
 ```
 
-An example project can be found on GitHub: https://github.com/ragnarstolsmark/migratortest
+An example project can be found on GitHub: 
+https://github.com/ragnarstolsmark/migratortest
 
 ### migrate method
 The migrate method takes a an array of migrations, filters them by those who have already been applied and executes them in sequence. The applied migrations is then stored in local storage under a key called: "appliedMigrations".
