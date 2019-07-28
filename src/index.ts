@@ -24,6 +24,9 @@ export function storeAppliedMigrations(
 
 export function migrate(migrations: migrator.IMigration[]) {
   const appliedMigrations = getAppliedMigrations();
-  migrator.migrate(migrations, appliedMigrations);
-  storeAppliedMigrations(appliedMigrations);
+  const appliedMigrationsThisTime = migrator.migrate(
+    migrations,
+    appliedMigrations
+  );
+  storeAppliedMigrations(appliedMigrations.concat(appliedMigrationsThisTime));
 }
