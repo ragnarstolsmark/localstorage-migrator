@@ -1,5 +1,5 @@
+import { IMigration } from "rstolsmark-json-migrator";
 import * as migrator from "../index";
-import { IAppliedMigration, IMigration } from "rstolsmark-json-migrator";
 
 interface INumObj {
   num: number;
