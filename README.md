@@ -58,10 +58,10 @@ export function runMigrations() : void {
 An example project can be found on GitHub: 
 https://github.com/ragnarstolsmark/migratortest
 
-### migrate method
-The migrate method takes a an array of migrations, filters them by those who have already been applied and executes them in sequence. The applied migrations is then stored in local storage under a key called: "appliedMigrations".
+### Methods
 
-### other methods
+### migrate
+The migrate method takes a an array of migrations, filters them by those who have already been applied and executes them in sequence. The applied migrations is then stored in local storage under a key called: "appliedMigrations".
 
 #### getAppliedMigrations
 
